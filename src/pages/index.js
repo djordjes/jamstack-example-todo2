@@ -1,7 +1,7 @@
 import React from "react";
 import { useQuery, gql } from "@apollo/client";
 
-console.log(process.env.FAUNADB_CLIENT_SECRET);
+console.log(process.env.FAUNADB_SERVER_SECRET);
 
 const ALL_TODOS = gql`
   query {
@@ -16,22 +16,21 @@ const ALL_TODOS = gql`
 `;
 
 export default () => {
-  /*const { loading, error, data } = useQuery(ALL_TODOS);
+  const { loading, error, data } = useQuery(ALL_TODOS);
   if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(</p>;*/
-  //const data = allToDo[];
+  if (error) return <p>Error :(</p>;
 
   return (
     <>
       <h1>Hello Gatsby !</h1>
       <ul>
-        {/*data.allTodos.data.map((todo) => {
+        {data.allTodos.data.map((todo) => {
           return (
             <li key={todo._id}>
               {todo.text} {todo.completed}
             </li>
           );
-        })*/}
+        })}
       </ul>
     </>
   );
