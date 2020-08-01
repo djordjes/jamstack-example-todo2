@@ -4,6 +4,9 @@ import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 const client = new ApolloClient({
   uri: "https://graphql.fauna.com/graphql",
   cache: new InMemoryCache(),
+  headers: {
+    authorization: `Bearer ${process.env.FAUNADB_CLIENT_SECRET}`,
+  },
 });
 
 export const wrapRootElement = ({ element }) => (
