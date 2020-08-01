@@ -16,21 +16,22 @@ const ALL_TODOS = gql`
 `;
 
 export default () => {
-  const { loading, error, data } = useQuery(ALL_TODOS);
+  /*const { loading, error, data } = useQuery(ALL_TODOS);
   if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(</p>;
+  if (error) return <p>Error :(</p>;*/
+  //const data = allToDo[];
 
   return (
     <>
       <h1>Hello Gatsby !</h1>
       <ul>
-        {data.allTodos.data.map((todo) => {
+        {/*data.allTodos.data.map((todo) => {
           return (
             <li key={todo._id}>
               {todo.text} {todo.completed}
             </li>
           );
-        })}
+        })*/}
       </ul>
     </>
   );
