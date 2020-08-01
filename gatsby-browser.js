@@ -1,11 +1,13 @@
 import React from "react";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 
+console.log(process.env);
+
 const client = new ApolloClient({
   uri: "https://graphql.fauna.com/graphql",
   cache: new InMemoryCache(),
   headers: {
-    authorization: `Bearer ${process.env.FAUNADB_CLIENT_SECRET}`,
+    authorization: `Bearer ${build.env.FAUNADB_CLIENT_SECRET}`,
   },
 });
 
