@@ -5,7 +5,7 @@ const client = new ApolloClient({
   uri: "https://graphql.fauna.com/graphql",
   cache: new InMemoryCache(),
   headers: {
-    authorization: `Bearer ${process.env.FAUNADB_ADMIN_SECRET}`,
+    authorization: `Bearer ${process.env.GATSBY_FAUNADB_ADMIN_SECRET}`,
   },
 });
 
